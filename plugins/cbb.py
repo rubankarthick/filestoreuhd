@@ -21,6 +21,18 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 ]
             )
         )
+    elif data == "morefromus": 
+        await query.message.edit_text(
+            text = f"<b>JOIN MORE CHANNEL TO DOWNLOAD MOVIE FAST❕</b>",
+            disable_web_page_preview = False,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🔒 CLOSE", callback_data = "close")
+                    ]
+                ]
+            )
+        )
     elif data == "close":
         await query.message.delete()
         try:
